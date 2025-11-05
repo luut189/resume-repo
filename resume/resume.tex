@@ -1,0 +1,33 @@
+\documentclass[letterpaper,11pt]{article}
+
+\newif\ifinternal
+\internaltrue   % change to \internalfalse for external version
+
+\input{preamble}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge Tuong Luu} \\ \vspace{1pt}
+  \small (226) 791-2248 $|$
+  \href{mailto:tm2luu@uwaterloo.ca}{\underline{tm2luu@uwaterloo.ca}} $|$
+  \href{https://linkedin.com/in/luut189}{\underline{linkedin.com/in/luut189}} $|$
+  \href{https://github.com/luut189}{\underline{github.com/luut189}} $|$
+  \href{https://luut189.github.io/}{\underline{luut189.github.io/}}
+\end{center}
+
+\ifinternal
+  % Internal order
+  \input{sections/education}
+  \input{sections/skills}
+  \input{sections/experience}
+  \input{sections/projects}
+\else
+  % External order
+  \input{sections/skills}
+  \input{sections/experience}
+  \input{sections/projects}
+  \input{sections/education}
+\fi
+
+\end{document}
