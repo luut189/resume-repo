@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Discover LaTeX Projects
       - id: discover
         run: |
           FILES=$(find . -type f -name "main.tex")
@@ -18,6 +19,7 @@ jobs:
           echo "$FILES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
+      - name: Compile LaTeX
       - uses: xu-cheng/latex-action@v4
         with:
           work_in_root_file_dir: true
