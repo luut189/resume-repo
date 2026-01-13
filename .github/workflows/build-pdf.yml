@@ -1,12 +1,12 @@
-name: build-pdfs
+name: build-pdf
 
 on:
   push:
     branches: [main]
 
 permissions:
-    contents: write
-    
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,29 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Discover LaTeX Projects
-        id: discover
-        run: |
-          FILES=$(find . -type f -name "main.tex")
-          echo "FILES<<EOF" >> $GITHUB_ENV
-          echo "$FILES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v4
         with:
+          root_file: main.tex
           work_in_root_file_dir: true
-          root_file: |
-            ${{ env.FILES }}
 
-      - name: Collect PDFs
+      - name: Collect PDF
         run: |
           mkdir -p pdfs
-          find . -type f -name "*.pdf" | while read pdf; do
-            rel_path=$(dirname "$pdf" | sed 's|^\./||')
-            name=$(echo "$rel_path" | sed 's|^assignments/||' | tr '/' '_')
-            cp "$pdf" "pdfs/${name}.pdf"
-          done
+          cp main.pdf pdfs/resume.pdf
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
