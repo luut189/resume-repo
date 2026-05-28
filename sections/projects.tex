@@ -3,22 +3,25 @@
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\href{https://github.com/luut189/anime-discuss}{\textbf{AniDis - Anime Discussion Platform}} $|$
-    React, TypeScript, Node.js, Express, MongoDB, Docker}{}
+{\href{https://anidis.moe}{\textbf{AniDis - Full-Stack Anime Platform}} $|$
+    Next.js, React, TypeScript, FastAPI, PostgreSQL, Redis, Docker}{}
 \resumeItemListStart
-\resumeItem{Developed \textbf{AniDis}, a MERN-based anime discussion platform with real-time updates for \textbf{1,000+} titles and threaded comments supporting unlimited nested replies.}
-\resumeItem{Automated data ingestion and trend updates with scheduled backend jobs, ensuring daily content freshness and scalable performance.}
-\resumeItem{Containerized deployment with Docker/Docker Compose, environment-based configuration, and CI/CD-ready Git workflows; self-hosted with Cloudflare Tunnel.}
-\resumeItem{Implemented security best practices and optimized frontend rendering for high-performance discussions.}
+\resumeItem{Built \textbf{AniDis}, an anime discovery, tracking, and discussion platform, with Next.js product, landing, and Cel docs apps in a Turborepo monorepo.}
+\resumeItem{Designed FastAPI/PostgreSQL APIs for anime discovery, profiles, folders, episode progress, follows, threads, nested comments, likes, and avatar handling.}
+\resumeItem{Created path-filtered CI for monorepo quality gates, including linting, formatting, type checks, pytest suites, Playwright E2E, and Docker build validation.}
+\resumeItem{Added backend release safety checks with Postgres-backed test runs and Alembic schema drift detection for migration correctness.}
+\resumeItem{Published SHA-tagged GHCR images for web, landing, Cel docs, and backend services, then deployed by git SHA through a self-hosted GitHub Actions runner.}
+\resumeItem{Managed staging and production Docker Compose stacks behind Traefik with Doppler-synced secrets, private backend/Redis networking, migrations, and smoke checks.}
+\resumeItem{Wired OpenTelemetry, Grafana, Loki, Tempo, Prometheus, and Alloy to collect backend telemetry and Docker logs across deployed environments.}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{\href{https://github.com/luut189/kyzen}{\textbf{Kyzen - 2D Game Engine}} $|$
-    Java, LWJGL, Maven, OpenGL}{}
-\resumeItemListStart
-\resumeItem{Developed a 2D game engine with batch rendering, optimizing the rendering of multiple objects in a single batch for improved performance by up to \textbf{60\%} when handling \textbf{1000+} objects per frame}
-\resumeItem{Utilized OOP principles to create scalable software, implementing design patterns like Builder and Singleton to ensure modularity and maintainability}
-\resumeItem{Implemented an Entity-Component System (ECS), providing a modular and extendable architecture for flexible game object composition}
-\resumeItem{Integrated texture atlas support, enabling efficient texture management for sprites and tiles, reducing draw calls by over \textbf{70\%}}
-\resumeItemListEnd
+% \resumeProjectHeading
+% {\href{https://github.com/luut189/kyzen}{\textbf{Kyzen - 2D Game Engine}} $|$
+%     Java, LWJGL, Maven, OpenGL}{}
+% \resumeItemListStart
+% \resumeItem{Developed a 2D game engine with batch rendering, optimizing the rendering of multiple objects in a single batch for improved performance by up to \textbf{60\%} when handling \textbf{1000+} objects per frame}
+% \resumeItem{Utilized OOP principles to create scalable software, implementing design patterns like Builder and Singleton to ensure modularity and maintainability}
+% \resumeItem{Implemented an Entity-Component System (ECS), providing a modular and extendable architecture for flexible game object composition}
+% \resumeItem{Integrated texture atlas support, enabling efficient texture management for sprites and tiles, reducing draw calls by over \textbf{70\%}}
+% \resumeItemListEnd
 \resumeSubHeadingListEnd
