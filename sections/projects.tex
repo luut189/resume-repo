@@ -6,12 +6,11 @@
 {\href{https://anidis.moe}{\textbf{AniDis - Full-Stack Anime Platform}} $|$
     Next.js, React, TypeScript, FastAPI, PostgreSQL, Redis, Docker, OpenTofu}{}
 \resumeItemListStart
-\resumeItem{Built \textbf{AniDis}, an anime discovery and discussion platform.}
-\resumeItem{Designed FastAPI/PostgreSQL APIs for discovery, profiles, episode progress, follows, threads, and nested comments, plus an auth stack with password, OTP, and OAuth flows.}
-\resumeItem{Delivered reliable reply notifications via a transactional-outbox publisher, a notification service, and an in-app inbox.}
-\resumeItem{Migrated the anime catalog to provider-neutral identifiers, eliminating duplicate writes with atomic upserts and cutting query cost via indexed seasonal rows.}
-\resumeItem{Automated releases with changesets and SHA-tagged images, plus preview environments gated by Cloudflare Access with isolated databases.}
-\resumeItem{Provisioned DNS and routing in OpenTofu, running Docker Compose stacks behind Traefik with Doppler-synced secrets, OpenTelemetry, and Grafana dashboards.}
+\resumeItem{Designed FastAPI/PostgreSQL APIs for anime discovery, profiles, folders, episode progress, follows, threads, nested comments, and likes.}
+\resumeItem{Built an auth stack with password credentials, email verification, OTP challenges, password reset, and OAuth account linking, hardened by signed request paths and split read/write rate limits.}
+\resumeItem{Architected an \textbf{event-driven} pipeline with a transactional-outbox publisher feeding decoupled notification and email-rendering services, powering in-app reply alerts and email delivery.}
+\resumeItem{Managed the \textbf{anidis.moe} domain, DNS, and Cloudflare access policies as code in OpenTofu, running Docker Compose stacks behind Traefik with OpenTelemetry and Grafana dashboards.}
+\resumeItem{Automated releases with changesets and SHA-tagged images, plus on-demand preview environments with isolated databases.}
 \resumeItemListEnd
 
 % \resumeProjectHeading

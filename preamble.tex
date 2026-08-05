@@ -17,7 +17,10 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{iftex}
+% pdfTeX-only: improves PDF text extraction for ATS. Skipped under XeTeX/LuaTeX,
+% which already emit proper ToUnicode maps.
+\ifPDFTeX\input{glyphtounicode}\fi
 
 
 %----------FONT OPTIONS----------
@@ -58,7 +61,7 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifPDFTeX\pdfgentounicode=1\fi
 
 %-------------------------
 % Custom commands
