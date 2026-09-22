@@ -1,24 +1,21 @@
-% !TEX root = resume.tex
+% !TEX root = ../main.tex
 
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeProjectHeading
-{\href{https://anidis.moe}{\textbf{AniDis - Full-Stack Anime Platform}} $|$
-    Next.js, React, TypeScript, FastAPI, PostgreSQL, Redis, Docker, OpenTofu}{}
+{\href{https://anidis.moe}{\textbf{AniDis -- Anime Discovery Platform}} $|$
+    TypeScript, Next.js, FastAPI, PostgreSQL}{}
 \resumeItemListStart
-\resumeItem{Designed FastAPI/PostgreSQL APIs for anime discovery, profiles, folders, episode progress, follows, threads, nested comments, and likes.}
-\resumeItem{Built an auth stack with password credentials, email verification, OTP challenges, password reset, and OAuth account linking, hardened by signed request paths and split read/write rate limits.}
-\resumeItem{Architected an \textbf{event-driven} pipeline with a transactional-outbox publisher feeding decoupled notification and email-rendering services, powering in-app reply alerts and email delivery.}
-\resumeItem{Managed the \textbf{anidis.moe} domain, DNS, and Cloudflare access policies as code in OpenTofu, running Docker Compose stacks behind Traefik with OpenTelemetry and Grafana dashboards.}
-\resumeItem{Automated releases with changesets and SHA-tagged images, plus on-demand preview environments with isolated databases.}
+\resumeItem{Built a full-stack platform for anime discovery, watch tracking, and community discussions, with verified accounts, OAuth account linking, and API rate limits}
+\resumeItem{Designed a transactional-outbox pipeline to deliver in-app notifications and email through separate services, decoupling delivery from API requests}
+\resumeItem{Automated releases with versioned Docker images and preview environments with isolated databases; managed DNS and access policies as code with OpenTofu}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\href{https://github.com/luut189/kyzen}{\textbf{Kyzen - 2D Game Engine}} $|$
-    Java, LWJGL, Maven, OpenGL}{}
+{\href{https://github.com/luut189/kyzen}{\textbf{Kyzen -- 2D Game Engine}} $|$
+    Java, LWJGL, OpenGL}{}
 \resumeItemListStart
-\resumeItem{Developed a 2D game engine with batch rendering, optimizing the rendering of multiple objects in a single batch for improved performance by up to \textbf{60\%} when handling \textbf{1000+} objects per frame}
-\resumeItem{Implemented an Entity-Component System (ECS), providing a modular and extendable architecture for flexible game object composition}
-\resumeItem{Integrated texture atlas support, enabling efficient texture management for sprites and tiles, reducing draw calls by over \textbf{70\%}}
+\resumeItem{Designed a batch renderer for scenes with \textbf{1,000+ objects per frame}; integrated texture atlases to reduce draw calls by \textbf{over 70\%}}
+\resumeItem{Implemented an entity-component system to compose game objects from reusable components}
 \resumeItemListEnd
 \resumeSubHeadingListEnd

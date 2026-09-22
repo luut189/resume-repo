@@ -1,7 +1,7 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 \newif\ifexternal
-\externaltrue   % change to \internalfalse for external version
+\externaltrue
 
 \input{preamble}
 
@@ -17,16 +17,16 @@
 \end{center}
 
 \ifexternal
-    % Waterloo order
-    \input{sections/education}
-    \input{sections/skills}
-    \input{sections/experience}
-    \input{sections/projects}
-\else
     % External order
-    \input{sections/skills}
+    \input{sections/education}
     \input{sections/experience}
     \input{sections/projects}
+    \input{sections/skills}
+\else
+    % Waterloo order
+    \input{sections/experience}
+    \input{sections/projects}
+    \input{sections/skills}
     \input{sections/education}
 \fi
 
